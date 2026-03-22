@@ -1,0 +1,12 @@
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\config\DataSourceConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\config\ElasticsearchConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\controller\ElasticsearchController.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\ElasticsearchApplication.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\feign\RabbitMQFeignClient.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\mapper\UserMapper.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\query\ElasticsearchQuery.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\service\GroupWithMQService.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\service\impl\GroupWithMQServiceImpl.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\service\impl\UserWithMQServiceImpl.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\service\UserWithMQService.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\Elasticsearch\src\main\java\elasticsearch\synchronization\ElasticsearchSynchronization.java

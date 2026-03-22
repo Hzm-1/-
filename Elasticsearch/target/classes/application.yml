@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: Elasticsearch
+#  jackson:
+#    serialization:
+#      write-dates-as-timestamps: false
+#      write-date-timestamps-as-nanoseconds: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "dfddf1a71aca389a"
+  Elasticsearch:
+    host: localhost
+    port: 9200
+    protocol: http
+    uris: http://localhost:9200
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+# Seata核心配置（适配Nacos 2.4.0）
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      # 直接使用公网IP:映射端口
+      default: 172.19.0.2:8090
+  # 临时绕过注册中心
+  registry:
+    type: file
+  config:
+    type: file
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8085
+

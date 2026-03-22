@@ -1,0 +1,51 @@
+spring:
+  cloud:
+    gateway:
+      globalcors: # 配置跨域，开启全局跨域
+        cors-configurations:
+          '[/**]': # 允许所有的请求跨域
+            allowed-origin-patterns: '*' # 允许哪些请求来源，*表示所有
+            allowed-headers: '*' # 允许所有的请求头，*表示所有
+            allowed-methods: '*' # 允许所有的请求方式，*表示所有
+            allow-credentials: true
+      routes:
+        - id: login-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://localhost:8083
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/login/**
+        - id: addNew-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://8.145.55.250:8086
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/addNew/**
+        - id: Elasticsearch-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://localhost:8085
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/Es/**
+        - id: message-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://localhost:8084
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/message/**
+        - id: settingModel-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://localhost:8088
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/setting/**
+        - id: RequestModel-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://8.145.55.250:8087
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/request/**
+        - id: websocket-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            ws://localhost:8081
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/ws/**
+        - id: chatGroup-route #给这个路由起名
+          uri: #路由转发的目标名称，lb为loadbalance的缩写
+            http://8.145.55.250:8089
+          predicates: #断言：若路径为/api/order开头的则转发
+            - Path=/chatGroup/**
