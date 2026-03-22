@@ -1,0 +1,10 @@
+websocket\feign\RabbitMQFeignClient.class
+websocket\controller\WebSocketController.class
+websocket\WebSocketApplication.class
+websocket\utils\WebSocketJSONHandler.class
+websocket\handler\MyWsHandler.class
+websocket\config\JacksonConfig.class
+websocket\handler\MyWsConfig.class
+websocket\handler\SessionBean.class
+websocket\mapper\WebSocketMapper.class
+websocket\interceptor\MyWsInterceptor.class

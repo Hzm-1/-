@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: websocket
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "dfddf1a71aca389a"
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #    开启了驼峰命名的开关，作用：将数据库找到的数据字段名称转为驼峰命名，例如create_time->createTime
+    map-underscore-to-camel-case: true
+server:
+  port: 8081
+# Seata核心配置（适配Nacos 2.4.0）
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      # 直接使用公网IP:映射端口
+      default: 172.19.0.2:8090
+  # 临时绕过注册中心
+  registry:
+    type: file
+  config:
+    type: file

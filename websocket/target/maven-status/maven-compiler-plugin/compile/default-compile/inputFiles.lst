@@ -1,0 +1,10 @@
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\config\JacksonConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\controller\WebSocketController.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\feign\RabbitMQFeignClient.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\handler\MyWsConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\handler\MyWsHandler.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\handler\SessionBean.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\interceptor\MyWsInterceptor.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\mapper\WebSocketMapper.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\utils\WebSocketJSONHandler.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\websocket\src\main\java\websocket\WebSocketApplication.java
