@@ -1,0 +1,12 @@
+rabbitMQ\feign\ElasticsearchFeignClient.class
+rabbitMQ\RabbitMQApplication.class
+rabbitMQ\conf\RabbitConfig.class
+rabbitMQ\consumer\Consumer$3.class
+rabbitMQ\create\CreateQueue.class
+rabbitMQ\producer\Producer.class
+rabbitMQ\consumer\Consumer$4.class
+rabbitMQ\consumer\Consumer$1.class
+rabbitMQ\controller\RabbitMQController.class
+rabbitMQ\feign\WebSocketFeignClient.class
+rabbitMQ\consumer\Consumer.class
+rabbitMQ\consumer\Consumer$2.class

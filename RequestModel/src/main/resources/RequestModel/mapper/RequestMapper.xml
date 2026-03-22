@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.ac.cn//DTD Mapper 3.0//EN"
+        "https://mybatis.ac.cn/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="RequestModel.mapper.RequestMapper">
+
+    <select id="getRequestByToUserEmail" resultMap="empResultMap">
+        SELECT
+        u.*, fr.message frMessage, fr.remark frRemark, fr.status frStatus
+        FROM friend_requests fr
+        INNER JOIN
+        user u
+        ON fr.from_user_email = u.email
+        WHERE fr.to_user_email = #{toUserEmail}
+    </select>
+
+
+    <resultMap id="empResultMap" type="model.addNew.RequestReceiver">
+        <result column="frMessage" property="message"/>
+        <result column="frRemark" property="remark"/>
+        <result column="frStatus" property="status"/>
+
+        <collection property="user" ofType="model.login.User">
+            <id column="id" property="id"/>
+            <result column="username" property="username"/>
+            <result column="password" property="password"/>
+            <result column="nickname" property="nickname"/>
+            <result column="avatar" property="avatar"/>
+            <result column="phone" property="phone"/>
+            <result column="email" property="email"/>
+            <result column="status" property="status"/>
+            <result column="created_at" property="createdAt"/>
+            <result column="updated_at" property="updatedAt"/>
+        </collection>
+    </resultMap>
+</mapper>

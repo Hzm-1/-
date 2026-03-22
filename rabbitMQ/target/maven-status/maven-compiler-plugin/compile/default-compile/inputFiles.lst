@@ -1,0 +1,8 @@
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\conf\RabbitConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\consumer\Consumer.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\controller\RabbitMQController.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\create\CreateQueue.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\feign\ElasticsearchFeignClient.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\feign\WebSocketFeignClient.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\producer\Producer.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\rabbitMQ\src\main\java\rabbitMQ\RabbitMQApplication.java
