@@ -1,0 +1,9 @@
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\ChatGroupServiceApplication.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\config\CorsConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\config\JacksonConfig.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\controller\ChatGroupController.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\feign\fallback\RabbitMQFeignClientFallback.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\feign\RabbitMQFeignClient.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\mapper\ChatGroupMapper.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\service\ChatGroupService.java
+C:\Users\黄泽民\IdeaProjects\Chat-Demo\ChatGroupService\src\main\java\chatGroupService\service\Impl\ChatGroupServiceImpl.java

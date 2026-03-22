@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.ac.cn//DTD Mapper 3.0//EN"
+        "https://mybatis.ac.cn/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="chatGroupService.mapper.ChatGroupMapper">
+
+    <insert id="addMembers" parameterType="java.util.List">
+        insert into group_chat_member(group_id, user_id, role, status, join_time, create_time, update_time) values
+        <foreach item="item" collection="users" separator=",">
+            (#{item.groupId}, #{item.userId}, #{item.role}, #{item.status}, #{item.joinTime}, #{item.createdTime}, #{item.updatedTime})
+        </foreach>
+    </insert>
+</mapper>
