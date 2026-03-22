@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "dfddf1a71aca389a"
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: "123456"
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1000
+  application:
+    name: message
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# Seata核心配置（适配Nacos 2.4.0）
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      # 直接使用公网IP:映射端口
+      default: 172.19.0.2:8090
+  # 临时绕过注册中心
+  registry:
+    type: file
+  config:
+    type: file
+
+server:
+  port: 8084

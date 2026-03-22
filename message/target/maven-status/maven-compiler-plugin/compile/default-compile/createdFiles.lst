@@ -1,0 +1,8 @@
+message\controller\MessageController.class
+message\mapper\MessageMapper.class
+message\MessageApplication.class
+message\service\impl\MessageServiceImpl.class
+message\service\impl\MessageServiceImpl$1.class
+message\config\CorsConfig.class
+message\config\RedisConfig.class
+message\service\MessageService.class

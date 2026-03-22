@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 固定值，必须放在最前面 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 父工程配置：必须在modelVersion之后，artifactId之前 -->
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>Chat-Demo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <!-- 关键：相对路径指向父工程的pom.xml，若路径错误会导致父工程找不到 -->
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <!-- model模块自身的artifactId（groupId/version继承父工程，无需重复） -->
+    <artifactId>model</artifactId>
+    <!-- 明确指定打包类型为普通jar，避免spring-boot插件干扰 -->
+    <packaging>jar</packaging>
+
+    <!-- 编译配置：可选，继承父工程也可 -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 实体类模块的必要依赖 -->
+    <dependencies>
+        <!-- 日期序列化：解决LocalDateTime JSON解析问题 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <!-- JWT工具类依赖 -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.11.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.11.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>0.11.5</version>
+        </dependency>
+    </dependencies>
+</project>
