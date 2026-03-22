@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: AIChatModel
+  #  jackson:
+  #    serialization:
+  #      write-dates-as-timestamps: false
+  #      write-date-timestamps-as-nanoseconds: false
+  datasource:
+    url: jdbc:mysql://8.145.60.4:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "dfddf1a71aca389a"
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+# Seata核心配置（适配Nacos 2.4.0）
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      # 直接使用公网IP:映射端口
+      default: 172.18.0.2:8090
+  # 临时绕过注册中心
+  registry:
+    type: file
+  config:
+    type: file
+server:
+  port: 8090
