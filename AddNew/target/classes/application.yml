@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: AddNew
+  #  jackson:
+  #    serialization:
+  #      write-dates-as-timestamps: false
+  #      write-date-timestamps-as-nanoseconds: false
+  datasource:
+    url: jdbc:mysql://8.145.60.4:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: "dfddf1a71aca389a"
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8086
+
